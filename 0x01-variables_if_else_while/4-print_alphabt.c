@@ -14,9 +14,9 @@ int main(void)
 	{
 		if (al == 'e' || al == 'q')
 		continue;
-	}
-		{ putchar(al); }
+	putchar(al);
 
+	}
 	putchar('\n');
 	return (0);
 }

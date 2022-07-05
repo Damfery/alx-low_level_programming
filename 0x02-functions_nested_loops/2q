@@ -1,0 +1,13 @@
+#include "main.h"
+/**
+ * _abs = prints absolute values
+ * @n: int to use
+ * Return: absolute value
+ */
+int _abs(int)
+{
+	int n;
+
+	if (n <= 0)
+		return (n * -1);
+}

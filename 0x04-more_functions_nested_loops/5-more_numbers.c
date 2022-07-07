@@ -1,21 +1,25 @@
 #include "main.h"
 
 /**
- * print_numbers - this prints all lower alphabet
+ * more_numbers - this prints all lower alphabet
  *
  * Return: 0 (otherwise)
  */
-void print_numbers(void)
+void more_numbers(void)
 {
-	char c;
-	char j;
+	int c;
+	int j;
 
 	j = 0;
 	while (j < 10)
-	{	
-	for (c = '0'; c <= '9'; c++)
-		_putchar(c);
+	{
+		{
+			for (c = 0 ; c <= 14 ; c++)
+			printf("%d", c);
+		}
+		printf("\n");
+		j++;
 	}
-	_putchar(*"\n");
-	j++;
 }
+
+

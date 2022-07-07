@@ -16,7 +16,7 @@ void print_triangle(int var)
 
 		do {
 			int ii;
-:
+
 			for (ii = 1; ii <= var; ii++)
 
 			{

@@ -16,10 +16,10 @@ void print_diagonal(int n)
 		for (jj = 1; jj <= n; jj++)
 		{
 			int ii;
-			
+
 			for (ii = 1; ii <= jj; ii++)
 			{
-				
+
 				if (ii == jj)
 					_putchar('\\');
 				else

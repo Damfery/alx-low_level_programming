@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * _puts - print string
  * @str: letters to be printed

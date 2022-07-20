@@ -31,7 +31,7 @@ int natural_sqrt(int n, int i)
 		return (1);
 	}
 	else if (i * i == n)
-	{	
+	{
 		return (i);
 	}
 	else if (i == n / 2)

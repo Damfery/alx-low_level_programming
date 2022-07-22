@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "main.h"
 
 /**
  * main - entry point, add positive numbers

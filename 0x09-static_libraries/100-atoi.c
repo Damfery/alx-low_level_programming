@@ -1,30 +1,38 @@
+#include <stdlib.h>
 #include "main.h"
+#include <limits.h>
+#include <string.h>
 
 /**
- * * *_atoi - convert string to number.
- * *
- * @s: string reference
- * @*res - pointer
- * Return: conversion
+ * _atoi - coverts a string to integer
+ * @str: pointer to string to be converted
+ * Return: converted string
  */
 
-int _atoi(char *s)
+int _atoi(char *str)
 {
-	int i, res = 0, sig = -1, brk = 0;
+	int sign = 1, base = 0, i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0' && (str[i] < '0' || str[i] > '9'); i++)
 	{
-		if (s[i] == '-')
-			sig = sig * -1;
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			res = res * 10;
-			res = res - (s[i] - '0');
-			brk = 1;
-		}
-		else if (brk == 1)
-			break;
+		if (str[i] == '-' || str[i] == '+')
+			sign *= 1 - 2 * (str[i] == '-');
+		if (str[i + 1] == '\0')
+			return (0);
 	}
-	res = sig *res;
-	return (res);
+
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		if (base > INT_MAX / 10	|| (base == INT_MAX / 10
+			&& str[i] - '0' > 7))
+		{
+			if (sign == 1)
+				return (INT_MAX);
+			else
+				return (INT_MIN);
+																	}
+		base = 10 * base + (str[i++] - '0');
+	}
+
+	return (base * sign);
 }

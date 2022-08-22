@@ -47,17 +47,5 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	if (close(file1) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1);
-		exit(100);
-	}
-
-	if (close(file2) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file2);
-		exit(100);
-	}
-
-	return (0);
+return(0);
 }
